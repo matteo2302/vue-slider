@@ -54,3 +54,11 @@ img {
 .bright {
   filter: brightness(1);
 }
+.caption {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-size: 18px;
+  color: white;
+  display: none;
+}

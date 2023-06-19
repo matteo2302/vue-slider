@@ -33,6 +33,11 @@ const app = createApp({
       count: 0,
     };
   },
+  method: {
+    increasecount() {
+      count + 1;
+    },
+  },
 });
 
 app.mount("#root");
