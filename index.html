@@ -43,7 +43,11 @@
         </div>
       </div>
       <div class="tambnail-box">
-        <i class="fa-solid fa-chevron-up" @click="decreasecount"></i>
+        <i
+          class="fa-solid fa-chevron-up"
+          @click="decreasecount"
+          v-show="count"
+        ></i>
         <div class="thumbnails">
           <img
             v-for="(photo, i) of images"
@@ -53,7 +57,11 @@
             :class="{active : count === i}"
           />
         </div>
-        <i class="fa-solid fa-chevron-down" @click="increasecount"></i>
+        <i
+          class="fa-solid fa-chevron-down"
+          @click="increasecount"
+          v-show="!lastPhoto"
+        ></i>
       </div>
     </div>
   </body>

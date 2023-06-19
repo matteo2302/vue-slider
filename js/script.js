@@ -33,20 +33,17 @@ const app = createApp({
       count: 0,
     };
   },
+  computed: {
+    lastPhoto() {
+      return this.count === this.images.length - 1;
+    },
+  },
   methods: {
     increasecount() {
-      if (this.count === images.lenght - 1) {
-        this.count = 0;
-      } else {
-        this.count++;
-      }
+      this.count++;
     },
     decreasecount() {
-      if (!this.count) {
-        this.count === images.lenght - 1;
-      } else {
-        this.count--;
-      }
+      this.count--;
     },
   },
 });
