@@ -25,14 +25,13 @@
     <div id="root" class="container">
       <div class="gallery">
         <div class="carrousel">
-          <div v-for="(photo, i) of images">
+          <div v-for="(photo, i) of images" v-show="count === i">
             <img
               v-bind:src="photo.image"
               alt="videogame"
               :title="photo.title"
-              :class="{active : count === i}"
             />
-            <div class="caption" :class="{active : count === i}">
+            <div class="caption">
               <h2>{{photo.title}}</h2>
               <p>{{photo.text}}</p>
             </div>
