@@ -59,5 +59,7 @@ img {
   left: 20px;
   font-size: 18px;
   color: white;
-  display: none;
+}
+.image-container {
+  height: 400px;
 }

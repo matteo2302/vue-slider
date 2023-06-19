@@ -25,7 +25,11 @@
     <div id="root" class="container">
       <div class="gallery">
         <div class="carrousel">
-          <div v-for="(photo, i) of images" v-show="count === i">
+          <div
+            class="image-container"
+            v-for="(photo, i) of images"
+            v-show="count === i"
+          >
             <img
               v-bind:src="photo.image"
               alt="videogame"
@@ -38,8 +42,8 @@
           </div>
         </div>
       </div>
-      <div class="tambnail-box" @click="increaseCount()">
-        <i class="fa-solid fa-chevron-up"></i>
+      <div class="tambnail-box">
+        <i class="fa-solid fa-chevron-up" @click="decreasecount"></i>
         <div class="thumbnails">
           <img
             v-for="(photo, i) of images"
@@ -49,7 +53,7 @@
             :class="{active : count === i}"
           />
         </div>
-        <i class="fa-solid fa-chevron-down"></i>
+        <i class="fa-solid fa-chevron-down" @click="increasecount"></i>
       </div>
     </div>
   </body>
