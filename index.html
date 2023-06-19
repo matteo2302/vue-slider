@@ -25,13 +25,8 @@
     <div id="root" class="container">
       <div class="gallery">
         <div class="carrousel">
-          <img
-            v-for="photo of images"
-            :src="images.image"
-            alt="videogame"
-            :title="images.title"
-            class="active"
-          />
+          <img v-for="(photo, i) of images" v-bind:src="photo.image"
+          alt="videogame" :title="photo.title" :class={active : count === i} />
         </div>
       </div>
       <div class="tambnail-box">
